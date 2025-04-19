@@ -28,7 +28,6 @@ BASE_URL = "/accounts"
 class TestAccountService(TestCase):
     """Account Service Tests"""
 
-    @classmethod
     def test_cors_security(self):
         """It should return a CORS header"""
         response = self.client.get('/', environ_overrides=HTTPS_ENVIRON)
